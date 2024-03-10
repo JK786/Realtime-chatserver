@@ -1,9 +1,14 @@
 package com.chatserver.chatroom;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
+
+@AllArgsConstructor
 @Component
 public class ChatroomsService {
+
+    private ChatroomRepository chatroomRepository;
 
     public void createChatroom(String chatroomName) {
         // create chatroom

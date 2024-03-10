@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ChatController {
 
-    @MessageMapping("/app/sendMessage") //message incoming this will come to this method
+    @MessageMapping("/sendMessage") //message incoming this will come to this method
     @SendTo("/topic/public") //response will be sent to this topic
     public ChatMessage sendMessage(ChatMessage chatMessage) {
         log.info("Message sent to topic" + chatMessage.toString());
@@ -20,7 +20,7 @@ public class ChatController {
     }
 
 //    @MessageMapping("/chat.addUser")
-//    @SendTo("/topic/public")
+//    @SendTo("/topic/public")s
 //    public ChatMessage addUser(ChatMessage chatMessage) {
 //        return chatMessage;
 //    }
